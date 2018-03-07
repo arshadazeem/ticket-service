@@ -1,14 +1,18 @@
-# Spring boot application for a sample Ticket Service
+# Spring boot application for a sample Ticketing Service
 
-contains 3 modules under ticket-service:
+This very basic application contains 3 modules under ticket-service:
 
 * ticket-service-common: has common code (utils, enums, dtos etc.)
 * ticket-service-main: has services, rest controllers and other main code
-* ticket-service-integration-tests: REST service integration tests using Spring's Rest Template as the     Rest client.
+* ticket-service-integration-tests: REST service integration tests using Spring's Rest Template as the Rest client.
+
+# Prerequisites:
+* Java 8
+* maven
 
 # Unit Testing:
 * I have used junit, and mockito to write unit tests and mock out dependencies.
-* Wrote couple of unit tests as example (e.g. TicketServiceImplTest, TicketServiceRepositoryImplTest), but didn't worry about full code coverage
+* Wrote couple of unit tests as examples (e.g. TicketServiceImplTest, TicketServiceRepositoryImplTest), but didn't worry about full code coverage
 
 # REST Service Endpoints:
 * Created 3 very basic endpoints for the 3 services (under TicketController.java)
@@ -24,9 +28,9 @@ contains 3 modules under ticket-service:
 
 1. Checkout/download the project from git
 2. cd into the ticket-service directory
-3. To build and run unit tests: mvn clean install
+3. To build and run unit tests: ```mvn clean install```
 4. cd into ticket-service-main project
-5. Start the application using: mvn spring-boot:run
+5. Start the application using: ```mvn spring-boot:run```
    This starts up the application on port "8080" by default (I have tested using 8080).
 
    If you don't have 8080 available, then run using 
@@ -35,5 +39,6 @@ contains 3 modules under ticket-service:
    you could also update "server.port" property under src/main/resources/ticketservice-config.properties
 
 6. cd into ticket-service-integration-tests and run:
-   mvn integration-test -DskipTest=false
+   ```mvn integration-test -DskipTest=false```
+7. The unit test results can be seen on the terminal (logged directly to standard out)
 
