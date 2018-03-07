@@ -13,8 +13,18 @@ import org.springframework.http.ResponseEntity;
 import com.myorg.ticketservice.response.FindAndHoldServiceResponse;
 import com.myorg.ticketservice.response.SeatReservationResponse;
 
+/**
+ * End to End integration test that finds and holds best available seats,
+ * and reserves them
+ *
+ * @author arshad.azeem
+ *
+ */
 public class FindHoldAndReserveE2EIntegrationTest extends TicketServiceIntegrationTest {
 
+  /**
+   * test E2E success scenario
+   */
   @Test
   public void givenValidInput_whenFindAndHoldAndReserveServicesCalled_thenReturnValidConfirmation() {
 
@@ -28,6 +38,11 @@ public class FindHoldAndReserveE2EIntegrationTest extends TicketServiceIntegrati
 
   }
 
+  /**
+   * find and hold seat
+   * 
+   * @return
+   */
   private int findAndHold() {
 
     this.printMessage("findAndHoldSeatService", "E2E Integration test");
@@ -55,6 +70,11 @@ public class FindHoldAndReserveE2EIntegrationTest extends TicketServiceIntegrati
     return seatHoldId;
   }
 
+  /**
+   * reserve seat
+   * 
+   * @param seatHoldId
+   */
   private void reserve(final int seatHoldId) {
 
     final String message = "Reserve Seats service with seatHoldId: " + seatHoldId;
