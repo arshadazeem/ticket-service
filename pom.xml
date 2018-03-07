@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.myorg.ticketservice</groupId>
+	<artifactId>ticket-service</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>ticket-service</name>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.2.RELEASE</version>
+	</parent>
+
+	<properties>
+		<project.version>1.0.0-SNAPSHOT</project.version>
+		<java.version>1.8</java.version>
+		<springboot.version>1.5.2.RELEASE</springboot.version>
+		<spring.version>4.3.9.RELEASE</spring.version>
+		<mockito.version>1.10.19</mockito.version>
+		<junit.version>4.12</junit.version>
+		<guava.version>22.0</guava.version>
+		<commons-lang3.version>3.5</commons-lang3.version>
+	</properties>
+
+	<modules>
+		<module>ticket-service-common</module>
+		<module>ticket-service-main</module>
+		<module>ticket-service-integration-tests</module>
+	</modules>
+
+	<dependencyManagement>
+
+		<dependencies>
+
+			<dependency>
+				<groupId>com.myorg.ticketservice</groupId>
+				<artifactId>ticket-service-common</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.myorg.ticketservice</groupId>
+				<artifactId>ticket-service-main</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<!-- spring -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-tomcat</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- google guava -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+
+			<!-- apache commons -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+
+			<!-- test -->
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>${mockito.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+		</dependencies>
+
+	</dependencyManagement>
+
+</project>
