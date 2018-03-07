@@ -1,6 +1,6 @@
-# Spring boot application for a sample Ticket Service
+# Spring boot application for a sample Ticketing Service
 
-contains 3 modules under ticket-service:
+This application ccontains 3 modules under ticket-service:
 
 * ticket-service-common: has common code (utils, enums, dtos etc.)
 * ticket-service-main: has services, rest controllers and other main code
@@ -24,9 +24,9 @@ contains 3 modules under ticket-service:
 
 1. Checkout/download the project from git
 2. cd into the ticket-service directory
-3. To build and run unit tests: mvn clean install
+3. To build and run unit tests: ```mvn clean install```
 4. cd into ticket-service-main project
-5. Start the application using: mvn spring-boot:run
+5. Start the application using: ```mvn spring-boot:run```
    This starts up the application on port "8080" by default (I have tested using 8080).
 
    If you don't have 8080 available, then run using 
@@ -35,5 +35,5 @@ contains 3 modules under ticket-service:
    you could also update "server.port" property under src/main/resources/ticketservice-config.properties
 
 6. cd into ticket-service-integration-tests and run:
-   mvn integration-test -DskipTest=false
+   ```mvn integration-test -DskipTest=false```
 
