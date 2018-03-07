@@ -43,7 +43,6 @@ import com.myorg.ticketservice.service.TicketServiceImpl;
 @RunWith(SpringJUnit4ClassRunner.class)
 public abstract class TicketServiceIntegrationTest {
 
-
   @Autowired
   private RestClient restClient;
 
