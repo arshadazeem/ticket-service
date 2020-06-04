@@ -7,16 +7,17 @@
 pool:
   vmImage: 'Ubuntu 16.04'
 
+variables:
+  ARSHAD_KEY: ARSHAD_VAL
+  JAVA_HOME: /usr/aazeem
 steps:
-
 - task: CmdLine@2
   inputs:
+    env:
+      a=b
     script:
       echo "Setting up JAVA_HOME..."
-      export JAVA_HOME='/usr/aazeen'
-      export ARSHAD_KEY=MY_VALUE
       echo "********************************************"
-      source /etc/environment
       echo $JAVA_HOME
       echo $ARSHAD_KEY
       echo "Running script from Azure Pipelines"
