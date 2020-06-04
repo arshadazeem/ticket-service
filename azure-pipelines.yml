@@ -13,16 +13,7 @@ variables:
 steps:
 - task: CmdLine@2
   inputs:
-    env:
-      a=b
-    script:
-      echo "Setting up JAVA_HOME..."
-      echo "********************************************"
-      echo $JAVA_HOME
-      echo $ARSHAD_KEY
-      echo "Running script from Azure Pipelines"
-      export PATH=$ARSHAD_KEY/binzz:$PATH
-      echo $PATH
+    script: 'env | sort' 
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
