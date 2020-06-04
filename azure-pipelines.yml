@@ -14,10 +14,8 @@ steps:
     script:
       echo "Setting up JAVA_HOME..."
       export JAVA_HOME='/usr/aazeen'
-      ls -/home/vsts/
-      cat ~/.bashrc
+      export $JAVA_HOME='/usr/testxyz'
       echo "********************************************"
-      cat ~/.bash
       source /etc/environment
       echo $JAVA_HOME
       echo "Running script from Azure Pipelines"
