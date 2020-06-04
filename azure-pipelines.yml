@@ -13,7 +13,7 @@ steps:
   inputs:
     script:
       echo "Setting up JAVA_HOME..."
-      export JAVA_HOME='/usr/lib'
+      export JAVA_HOME='/usr/aazeen'
       echo $JAVA_HOME
       echo "Running script from Azure Pipelines"
       echo $PATH
