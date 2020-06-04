@@ -12,9 +12,10 @@ steps:
 - task: CmdLine@2
   inputs:
     script:
-      export JAVA_HOME=/usr/lib
+      echo "Setting up JAVA_HOME..."
+      export JAVA_HOME='/usr/lib'
       echo $JAVA_HOME
-      echo Running script from Azure Pipelines
+      echo "Running script from Azure Pipelines"
       echo $PATH
 - task: Maven@3
   inputs:
