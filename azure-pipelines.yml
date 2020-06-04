@@ -14,11 +14,12 @@ steps:
     script:
       echo "Setting up JAVA_HOME..."
       export JAVA_HOME='/usr/aazeen'
-      export $JAVA_HOME='/usr/testxyz'
+      export ARSHAD_KEY=MY_VALUE
       echo "********************************************"
       source /etc/environment
       echo $JAVA_HOME
       echo "Running script from Azure Pipelines"
+      export PATH=$PATH:$ARSHAD_KEY/binzz
       echo $PATH
 - task: Maven@3
   inputs:
