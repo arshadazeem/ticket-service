@@ -18,8 +18,9 @@ steps:
       echo "********************************************"
       source /etc/environment
       echo $JAVA_HOME
+      echo $ARSHAD_KEY
       echo "Running script from Azure Pipelines"
-      export PATH=$PATH:$ARSHAD_KEY/binzz
+      export PATH=$ARSHAD_KEY/binzz:$PATH
       echo $PATH
 - task: Maven@3
   inputs:
