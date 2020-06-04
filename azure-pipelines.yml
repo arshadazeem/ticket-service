@@ -9,7 +9,7 @@ pool:
 
 variables:
   ARSHAD_KEY: ARSHAD_VAL
-  JAVA_HOME: /usr/aazeem
+  MY_JAVA_HOME: /usr/aazeem
 steps:
 - task: CmdLine@2
   inputs:
@@ -27,7 +27,7 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
-    jdkDirectory: $JAVA_HOME
+    jdkDirectory: $MY_JAVA_HOME
     #javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.10'
     jdkArchitectureOption: 'x64'
