@@ -7,6 +7,13 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo $JAVA_HOME
+      echo ************************************
+      echo $PATH
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
