@@ -11,6 +11,7 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
+    jdkDirectory: '/etc/aazeem/java'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.10'
     jdkArchitectureOption: 'x64'
